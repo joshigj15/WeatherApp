@@ -1,0 +1,20 @@
+
+      <table>
+        <thead>
+          <tr>
+              <th>City Name</th>
+              <th>Temp</th>
+              <th>Humidity</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let data of foreCastData" (click)="getFiveDayForeCast(data)">
+            <td>{{data.main.temp}}</td>
+            <td>{{data.main.pressure}}</td>
+            <td>{{data.main.dt_txt}}</td>
+            <td>{{data.wind.speed}}</td>
+          </tr>
+        
+        </tbody>
+      </table>
